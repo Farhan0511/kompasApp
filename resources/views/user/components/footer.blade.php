@@ -1,17 +1,5 @@
 <footer id="footer" class="footer">
 
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-6">
-                    <h4>Info Kompas UNBAJA</h4>
-                    <p>Dapatkan update berita kampus terbaru.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer Top -->
     <div class="container footer-top">
         <div class="row gy-4">
