@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>@yield('title')</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
-    <link rel="icon" href="{{ asset('views/assets/admin/img/blogpost.jpg') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('views/assets/user/img/kompasapp.jpeg') }}" type="image/x-icon" />
 
     <!-- Fonts and icons -->
     <script src="{{ asset('views/assets/admin/js/plugin/webfont/webfont.min.js') }}"></script>
@@ -35,13 +35,183 @@
     <link rel="stylesheet" href="{{ asset('views/assets/admin/css/kaiadmin.min.css') }}" />
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('views/assets/admin/css/demo.css') }}" />
     <link rel="stylesheet" href="{{ asset('views/assets/admin/css/fonts.css') }}">
 </head>
 
 <body>
 
-   
+    <div class="wrapper">
+    @include('admin.components.sidebar')
+
+    <main class="main">
+        @yield('content')
+    </main>
+
+        <div class="main-panel">
+            <div class="main-header">
+                <!-- Navbar Header -->
+                <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                            <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+                                <ul class="dropdown-menu dropdown-search animated fadeIn">
+                                    <form class="navbar-left navbar-form nav-search">
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Search ..." class="form-control" />
+                                        </div>
+                                    </form>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item topbar-user dropdown hidden-caret">
+                                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
+                                    aria-expanded="false">
+                                    <div class="avatar-sm">
+                                        <img src="assets/img/profile.jpg" alt="..."
+                                            class="avatar-img rounded-circle" />
+                                    </div>
+                                    <span class="profile-username">
+                                        <span class="op-7">Hi,</span>
+                                        <span class="fw-bold">Hizrian</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+
+            <div class="container">
+                <div class="page-inner">
+                    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+                        <div>
+                            <h3 class="fw-bold mb-3">Dashboard Kompas App</h3>
+                            <p>Monitoring data booking penampilan Kompas</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Total Booking -->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-stats card-round">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-icon">
+                                            <div class="icon-big text-center icon-primary bubble-shadow-small">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col col-stats ms-3">
+                                            <div class="numbers">
+                                                <p class="card-category">Total Booking</p>
+                                                <h4 class="card-title">{{ $totalBooking ?? 0 }}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending -->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-stats card-round">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-icon">
+                                            <div class="icon-big text-center icon-warning bubble-shadow-small">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col col-stats ms-3">
+                                            <div class="numbers">
+                                                <p class="card-category">Pending</p>
+                                                <h4 class="card-title">{{ $pending ?? 0 }}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Disetujui -->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-stats card-round">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-icon">
+                                            <div class="icon-big text-center icon-success bubble-shadow-small">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col col-stats ms-3">
+                                            <div class="numbers">
+                                                <p class="card-category">Disetujui</p>
+                                                <h4 class="card-title">{{ $approved ?? 0 }}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ditolak -->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-stats card-round">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-icon">
+                                            <div class="icon-big text-center icon-danger bubble-shadow-small">
+                                                <i class="fas fa-times-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col col-stats ms-3">
+                                            <div class="numbers">
+                                                <p class="card-category">Ditolak</p>
+                                                <h4 class="card-title">{{ $rejected ?? 0 }}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container-fluid d-flex justify-content-between">
+                    <nav class="pull-left">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://www.themekita.com">
+                                    ThemeKita
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> Help </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> Licenses </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright">
+                        2024, made with <i class="fa fa-heart heart text-danger"></i> by
+                        <a href="http://www.themekita.com">ThemeKita</a>
+                    </div>
+                    <div>
+                        Distributed by
+                        <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
     <!--   Core JS Files   -->
     <script src="{{ asset('views/assets/admin/js/core/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('views/assets/admin/js/core/popper.min.js') }}"></script>
