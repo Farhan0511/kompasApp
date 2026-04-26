@@ -1,5 +1,5 @@
 <section id="featured-services" class="featured-services section">
-    <div class="container">
+    <div class="container ">
 
         <!-- Judul -->
         <div class="section-title text-center mb-5">
@@ -29,7 +29,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="service-item position-relative">
 
-                    <img src="{{ asset('views/assets/user/img/kompasapp.jpeg') }}" class="img-fluid mb-3">
+                    <img src="{{ asset('views/assets/user/img/kompas3.jpg') }}" class="img-fluid mb-3">
 
                     <div class="icon"><i class="bi bi-mic icon"></i></div>
 
@@ -42,7 +42,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="service-item position-relative">
 
-                    {{-- <img src="{{ asset('views/user/img/kompas3.jpg') }}" class="img-fluid mb-3"> --}}
+                    <img src="{{ asset('views/assets/user/img/kompas3.jpg') }}" class="img-fluid mb-3">
 
                     <div class="icon"><i class="bi bi-calendar-check icon"></i></div>
 
@@ -55,7 +55,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="service-item position-relative">
 
-                    {{-- <img src="{{ asset('views/user/img/kompas4.jpg') }}" class="img-fluid mb-3"> --}}
+                    <img src="{{ asset('views/assets/user/img/kompas3.jpg') }}" class="img-fluid mb-3">
 
                     <div class="icon"><i class="bi bi-people icon"></i></div>
 
@@ -68,7 +68,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="service-item position-relative">
 
-                    {{-- <img src="{{ asset('views/user/img/kompas5.jpg') }}" class="img-fluid mb-3"> --}}
+                    <img src="{{ asset('views/assets/user/img/kompas3.jpg') }}" class="img-fluid mb-3">
 
                     <div class="icon"><i class="bi bi-trophy icon"></i></div>
 
@@ -81,7 +81,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="service-item position-relative">
 
-                    {{-- <img src="{{ asset('views/user/img/kompas6.jpg') }}" class="img-fluid mb-3"> --}}
+                    <img src="{{ asset('views/assets/user/img/kompas3.jpg') }}" class="img-fluid mb-3">
 
                     <div class="icon"><i class="bi bi-journal-text icon"></i></div>
 

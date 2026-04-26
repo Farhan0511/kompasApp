@@ -9,15 +9,14 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="{{ route('home') }}" class="active">Home</a></li>
-                <li><a href="#profile">Profil</a></li>
                 <li><a href="{{ route('booking') }}">Booking</a></li>
-                <li><a href="#jadwal">Jadwal</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ route('jadwal') }}">Jadwal</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="index.html#about">Get Started</a>
+        <a class="btn-getstarted" href="index.html#about">Booking Sekarang</a>
 
     </div>
 </header>
