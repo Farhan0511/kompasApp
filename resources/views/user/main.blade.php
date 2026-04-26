@@ -12,6 +12,7 @@
     <link href="{{ asset('views/assets/user/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('views/assets/user/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('views/assets/user/css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('views/assets/user/css/main.css') }}">
 </head>
 
 <body>

@@ -8,4 +8,6 @@
     @include('user.components.kegiatan')
 
     @include('user.components.sewa-component')
+
+    @include('user.components.form-booking')
 @endsection
