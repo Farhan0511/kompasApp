@@ -2,17 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index() {
-        return view('user.pages.welcome');
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        // Removed auth middleware to allow public access
     }
 
-    public function booking() {
-        return view('user.pages.booking');
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
-    public function jadwal(){
-        return view('user.pages.jadwal');
+
+    public function bookingHub()
+    {
+        return view('user.pages.booking-hub');
     }
 }

@@ -48,8 +48,28 @@
     <div class="main-panel">
 
         @include('admin.components.navbar')
-
+        
         <div class="container">
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert" style="border-left: 4px solid #198754;">
+                    <i class="fas fa-check-circle me-2"></i><strong>Berhasil!</strong> {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            @endif
+    
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert" style="border-left: 4px solid #dc3545;">
+                    <i class="fas fa-exclamation-triangle me-2"></i><strong>Error!</strong> {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            @endif
+    
+            @if(session('info'))
+                <div class="alert alert-info alert-dismissible fade show shadow-sm" role="alert" style="border-left: 4px solid #0dcaf0;">
+                    <i class="fas fa-info-circle me-2"></i><strong>Info:</strong> {{ session('info') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            @endif
             <div class="page-inner">
                 @yield('content') 
             </div>

@@ -21,18 +21,20 @@
                             style="object-fit: cover;">
 
                         <span class="ms-2 d-none d-sm-inline">
-                            Hi, <strong>Hizrian</strong>
+                            Hi, <strong>{{ auth()->user()->name }}</strong>
                         </span>
                     </a>
 
                     <!-- Dropdown Menu -->
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><span class="dropdown-item-text text-muted small">{{ ucfirst(str_replace('_', ' ', auth()->user()->role)) }}</span></li>
+                        <li><hr class="dropdown-divider"></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item text-danger">Logout</button>
+                            </form>
                         </li>
-                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
                     </ul>
                 </li>
 
